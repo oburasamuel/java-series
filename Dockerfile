@@ -16,7 +16,7 @@ RUN mvn dependency:go-offline -B
 COPY email-writer-sb ./src
 
 # Build the application JAR
-RUN mvn clean package -DskipTests
+# RUN mvn clean package -DskipTests
 
 # ================================
 # Stage 2: Run the Application
