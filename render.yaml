@@ -4,8 +4,8 @@ services:
     env: docker
     region: frankfurt  # or oregon, ohio; adjust if you want
     plan: free
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
+    dockerfilePath: ./email-writer/email-writer-sb/Dockerfile
+    dockerContext: ./email-writer/email-writer-sb
     healthCheckPath: /
     envVars:
       - key: GROQ_API_URL
