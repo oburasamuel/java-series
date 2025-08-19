@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: email-writer-sb
+    env: docker
+    region: frankfurt  # or oregon, ohio; adjust if you want
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: GROQ_API_URL
+        value: https://api.groq.com
+      - key: GROQ_API_KEY
+        value: YOUR_API_KEY_HERE
+      # Add other environment variables below if needed
+    autoDeploy: true
