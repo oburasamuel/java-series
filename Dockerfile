@@ -26,7 +26,7 @@ FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 
 # Copy the packaged JAR from the build stage
-COPY --from=build /app/target/*-SNAPSHOT.jar app.jar
+COPY --from=build email-writer/email-writer-sb/target/*-SNAPSHOT.jar app.jar
 
 # Expose application port
 EXPOSE 8080
