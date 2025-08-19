@@ -2,7 +2,6 @@
 FROM maven:3.9.9-eclipse-temurin-21-alpine AS build
 WORKDIR /app
 COPY /email-writer-sb/pom.xml .
-RUN mvn clean package -DskipTests
 
 # Stage 2: Run
 FROM eclipse-temurin:21-jdk-alpine
